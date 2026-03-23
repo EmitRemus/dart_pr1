@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../emission/presentation/views/emission_calculator_page.dart';
 import '../../../fuel/presentation/views/fuel_calculator_page.dart';
 import '../../../fuel_oil/presentation/views/fuel_oil_calculator_page.dart';
 
@@ -8,15 +9,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Thermal Calculators'),
           centerTitle: true,
           bottom: const TabBar(
+            isScrollable: true,
             tabs: [
               Tab(text: 'Fuel'),
               Tab(text: 'Fuel Oil'),
+              Tab(text: 'Emission'),
             ],
           ),
         ),
@@ -24,6 +27,7 @@ class HomePage extends StatelessWidget {
           children: [
             FuelCalculatorPage(),
             FuelOilCalculatorPage(),
+            EmissionCalculatorPage(),
           ],
         ),
       ),
