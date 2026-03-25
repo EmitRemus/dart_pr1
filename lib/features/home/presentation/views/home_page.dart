@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../electrical/presentation/views/electrical_calculator_page.dart';
 import '../../../emission/presentation/views/emission_calculator_page.dart';
 import '../../../fuel/presentation/views/fuel_calculator_page.dart';
 import '../../../fuel_oil/presentation/views/fuel_oil_calculator_page.dart';
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Thermal Calculators'),
@@ -22,6 +23,7 @@ class HomePage extends StatelessWidget {
               Tab(text: 'Fuel Oil'),
               Tab(text: 'Emission'),
               Tab(text: 'Margin'),
+              Tab(text: 'Electrical'),
             ],
           ),
         ),
@@ -31,6 +33,7 @@ class HomePage extends StatelessWidget {
             FuelOilCalculatorPage(),
             EmissionCalculatorPage(),
             MarginCalculatorPage(),
+            ElectricalCalculatorPage(),
           ],
         ),
       ),
